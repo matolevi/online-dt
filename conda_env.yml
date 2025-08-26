@@ -1,22 +1,33 @@
-name: odt
+name: odt-clean
 channels:
-  - defaults
-  - pytorch
   - conda-forge
 dependencies:
-  - python=3.8.5
-  - numpy
-  - pyyaml
-  - pybullet
+  - python=3.8.20
+  - numpy=1.24.4
+  - pillow
   - pip
+  - typing_extensions
   - pip:
-    - gym==0.22.0
-    - git+https://github.com/rail-berkeley/d4rl@master#egg=d4rl
-    - mujoco-py
-    - mujoco==2.2.1
-    - torch
-    - stable-baselines3==1.1.0
-    - tensorboard==2.5.0
-    - transformers==4.11.0
-    - cython==0.29.37
-    - einops
+      # Core DL / RL stack
+      - torch==2.4.1
+      - torchvision==0.19.1
+      - gym==0.26.2
+      - gymnasium==1.1.1
+      - shimmy==2.0.0
+      - stable-baselines3==2.4.1
+      - einops==0.8.0
+      - transformers==4.46.3
+      - tqdm==4.67.1
+
+      # Datasets and Mujoco v4 env support
+      - just-d4rl==0.2407.5
+      - mujoco==3.2.3
+
+      # Logging / utilities / video
+      - tensorboard==2.20.0
+      - imageio==2.36.0
+      - imageio-ffmpeg==0.5.1
+      - cloudpickle==3.1.1
+      - jax-jumpy==1.0.0
+      - farama-notifications==0.0.4
+      - icecream==2.1.3
