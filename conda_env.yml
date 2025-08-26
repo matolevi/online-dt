@@ -1,0 +1,22 @@
+name: odt
+channels:
+  - defaults
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.8.5
+  - numpy
+  - pyyaml
+  - pybullet
+  - pip
+  - pip:
+    - gym==0.22.0
+    - git+https://github.com/rail-berkeley/d4rl@master#egg=d4rl
+    - mujoco-py
+    - mujoco==2.2.1
+    - torch
+    - stable-baselines3==1.1.0
+    - tensorboard==2.5.0
+    - transformers==4.11.0
+    - cython==0.29.37
+    - einops
